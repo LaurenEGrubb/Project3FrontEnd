@@ -4,8 +4,8 @@ export const Nav = () => {
   return (
     <nav>
       <div className="logo">
-        <Link to="/"></Link>
-      </div>
+        <Link to="/register">Register</Link>
+        </div>
     </nav>
   )
 }
