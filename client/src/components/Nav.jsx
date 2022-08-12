@@ -4,7 +4,7 @@ export const Nav = () => {
   return (
     <nav>
       <div className="logo">
-        <Link to="/">Picture Perfect</Link>
+        <Link to="/"></Link>
       </div>
     </nav>
   )
