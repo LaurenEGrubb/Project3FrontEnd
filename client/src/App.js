@@ -1,6 +1,7 @@
 import './App.css'
 import { Nav } from './components/Nav'
 import { Routes, Route } from 'react-router-dom'
+import Register from './pages/Register'
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         <Nav />
       </header>
       <main>
-        <Routes></Routes>
+        <Routes>
+          <Route path="/register" element={<Register />} />
+        </Routes>
       </main>
     </div>
   )
