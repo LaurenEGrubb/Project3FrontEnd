@@ -42,17 +42,18 @@ const Register = () => {
     <div>
       <div>
         <form className="col" onSubmit={handleSubmit}>
-          <div>
+          <div className="form-wrap">
             <label htmlFor="firstName">First Name</label>
             <input
               onChange={handleChange}
               name="firstName"
               type="text"
-              placeholder="Mr"
+              placeholder="John"
               value={formValues.firstName}
               reuqired
             />
           </div>
+          <div className="form-wrap"></div>
         </form>
       </div>
     </div>
