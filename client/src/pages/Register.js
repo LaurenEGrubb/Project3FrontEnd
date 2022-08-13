@@ -35,8 +35,8 @@ const Register = () => {
       email: formValues.email,
       password: formValues.password
     })
-    initialFormState()
-    navigate('/signin')
+    setFormValues(initialFormState)
+    navigate('/login')
   }
 
   return (
