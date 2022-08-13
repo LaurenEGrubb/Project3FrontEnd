@@ -18,10 +18,10 @@ const Feed = ({ user, authenticated }) => {
       {posts?.map((post) => (
         <div className="album-card" key={post.id}>
           <h3>{post.name}</h3>
+          <p>{post.description}</p>
           <div>
             <img src={post.photoUrl} />
           </div>
-          <p>{post.description}</p>
         </div>
       ))}
     </div>

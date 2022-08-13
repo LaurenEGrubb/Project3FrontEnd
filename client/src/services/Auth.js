@@ -18,6 +18,15 @@ export const RegisterUser = async (data) => {
     throw error
   }
 }
+export const UpdatePassword = async (data) => {
+  try {
+    const res = await Client.put('api/users/updatepassword', data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
 export const CheckSession = async () => {
   try {
     const res = await Client.post('api/users/session')
