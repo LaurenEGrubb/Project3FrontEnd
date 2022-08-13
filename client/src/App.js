@@ -7,6 +7,7 @@ import { CheckSession } from './services/Auth'
 import Login from './pages/Login'
 import Feed from './pages/Feed'
 import Home from './pages/Home'
+import Profile from './pages/Profile'
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false)
@@ -39,6 +40,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route
             path="/login"
             element={
