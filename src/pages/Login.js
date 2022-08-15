@@ -67,6 +67,11 @@ const Login = ({ setUser, setAuthenticated }) => {
             <div class="drop drop-7"></div>
             <div class="drop drop-8"></div>
             <div class="drop drop-9"></div>
+            <div class="drop drop-10"></div>
+            <div class="drop drop-11"></div>
+            <div class="drop drop-12"></div>
+            <div class="drop drop-13"></div>
+            <div class="drop drop-14"></div>
         </div>
     </div>
   )
