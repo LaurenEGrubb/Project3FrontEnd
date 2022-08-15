@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NewAlbum, GetAlbums } from '../services/PostServices'
 import { useNavigate } from 'react-router-dom'
+import { GetAlbumsByUser } from '../services/ProfileServices'
 
 const NewPost = ({ user }) => {
   let navigate = useNavigate()
@@ -10,6 +11,15 @@ const NewPost = ({ user }) => {
     photoUrl: ''
   })
 
+  const [posts, setPosts] = useState([])
+  useEffect(() => {
+    const showPosts = async () => {
+      const data = await GetAlbumsByUser(user.id)
+
+      setPosts(data)
+    }
+    showPosts()
+  }, [])
   // const [newPost, setNewPost] = useState(defaultPost)
 
   const handleChange = (e) => {
@@ -26,13 +36,13 @@ const NewPost = ({ user }) => {
       },
       user.id
     )
-    // GetAlbums()
+    console.log(res)
     setAddPost({
       name: '',
       description: '',
       photoUrl: ''
     })
-    navigate('/feed')
+    navigate(`/feed/${res.id}`)
   }
 
   return (

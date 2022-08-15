@@ -1,300 +1,281 @@
-
-
-body {
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    background-image: url(https://c0.wallpaperflare.com/preview/937/498/462/photographer-camera-photos-insta.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display:flex;
-    font-family: 'Montserrat', sans-serif;
-    
+/* body {
+  background: linear-gradient(45deg, #fc466b, #3f5efb);
+  background-image: url(https://c0.wallpaperflare.com/preview/937/498/462/photographer-camera-photos-insta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
 }
 .container {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 form {
-    background: white;
-    opacity: .45;
-    padding: 3em;
-    height: 320px;
-    border-radius: 20px;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    backdrop-filter: blur(10px);
-    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-    text-align: center;
-    position: relative;
-    transition: all 0.2s ease-in-out;
-
+  background: white;
+  opacity: 0.45;
+  padding: 3em;
+  height: 320px;
+  border-radius: 20px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
 }
 form:hover {
-    margin-top: -30px;
+  margin-top: -30px;
 }
 .login {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 h1 {
-    font-weight: 500;
-    color: rgb(246, 246, 246);
-    opacity: 0.90;
-    font-size: 2.5rem;
-    margin-top: 0;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  font-weight: 500;
+  color: rgb(246, 246, 246);
+  opacity: 0.9;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 input {
-    background: transparent;
-    width: 200px;
-    padding: 1em;
-    margin-bottom: 2em;
-    border: none;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    border-radius: 50000px;
-    backdrop-filter: blur(5px);
-    box-shadow: 4px 4px 60px rgba(red, green, blue, alpha);
-    color: black;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-
- 
-}   
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 50000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(red, green, blue, alpha);
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 input:hover {
-        background: rgba(225,225,225, 0.1);
-        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
-    }
-
+  background: rgba(225, 225, 225, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
 
 input[type='email']:focus {
-    background: rgba(225,225,225,0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2)
-
+  background: rgba(225, 225, 225, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
 input[type='password']:focus {
-    background: rgba(225,225,225,0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2)
-
+  background: rgba(225, 225, 225, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
 button {
-    margin-top: 10px;
-    width: 150px;
-    border-radius: 10%;
-    font-size: 1rem;
-    font: black;
-    background: rgba(0, 191, 255, 0.1);
-    color:#000000;
+  margin-top: 10px;
+  width: 150px;
+  border-radius: 10%;
+  font-size: 1rem;
+  font: black;
+  background: rgba(0, 191, 255, 0.1);
+  color: #000000;
 }
 button:hover {
-    cursor: pointer;
-     box-shadow: 0 0 15px #54f6ff;
-    transition: all 0.55s ease;
-    margin: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #54f6ff;
+  transition: all 0.55s ease;
+  margin: 4px;
 }
 button:active {
-    background: rgba(255, 255, 255, 0.2)
+  background: rgba(255, 255, 255, 0.2);
 }
 .drop {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    object-fit: cover;
-    background-size: cover;
-    padding: 0px;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    
-    box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
-    position: absolute;
-    transition: all 0.2s ease;
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  object-fit: cover;
+  background-size: cover;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+
+  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.2s ease;
 }
 .drop-1 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    object-fit: cover;
-    opacity: .35;
-    background-size: cover;
-    background-position: center;
-    height: 77px;
-    width: 65px;
-    padding: 0px;
-    top: 30px;
-    left: -40px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  object-fit: cover;
+  opacity: 0.35;
+  background-size: cover;
+  background-position: center;
+  height: 77px;
+  width: 65px;
+  padding: 0px;
+  top: 30px;
+  left: -40px;
+  z-index: -1;
 }
 .drop-2 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    opacity: .75;
-    object-fit: fill;
-    background-position: center;
-    height: 80px;
-    width: 60px;
-    bottom: -30px;
-    right: 70px;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  opacity: 0.75;
+  object-fit: fill;
+  background-position: center;
+  height: 80px;
+  width: 60px;
+  bottom: -30px;
+  right: 70px;
 }
 .drop-3 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .70;
-    object-fit: fill;
-    height: 100px;
-    width: 90px;
-    bottom: 120px;
-    right: -35px;
-    z-index: 1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  object-fit: fill;
+  height: 100px;
+  width: 90px;
+  bottom: 120px;
+  right: -35px;
+  z-index: 1;
 }
 .drop-4 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .5;
-    object-fit: fill;
-    height: 115px;
-    width: 90px;
-    top: -60px;
-    right: -60px;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  object-fit: fill;
+  height: 115px;
+  width: 90px;
+  top: -60px;
+  right: -60px;
 }
 .drop-5 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .75;
-    object-fit: fill;
-    height: 80px;
-    width: 90px;
-    bottom: 100px;
-    left: -80px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+  object-fit: fill;
+  height: 80px;
+  width: 90px;
+  bottom: 100px;
+  left: -80px;
+  z-index: -1;
 }
 .drop-6 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .35;
-    object-fit: fill;
-    height: 80px;
-    width: 90px;
-    bottom: 100px;
-    left: -80px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  object-fit: fill;
+  height: 80px;
+  width: 90px;
+  bottom: 100px;
+  left: -80px;
+  z-index: -1;
 }
 .drop-7 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .4;
-    object-fit: fill;
-    height: 80px;
-    width: 90px;
-    bottom: 600px;
-    left: -200px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  object-fit: fill;
+  height: 80px;
+  width: 90px;
+  bottom: 600px;
+  left: -200px;
+  z-index: -1;
 }
 .drop-8 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .50;
-    object-fit: fill;
-    height: 100px;
-    width: 100px;
-    bottom: -200px;
-    left: -80px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  object-fit: fill;
+  height: 100px;
+  width: 100px;
+  bottom: -200px;
+  left: -80px;
+  z-index: -1;
 }
 .drop-9 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .85;
-    object-fit: fill;
-    height: 150px;
-    width: 150px;
-    bottom: -200px;
-    left: 450px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  object-fit: fill;
+  height: 150px;
+  width: 150px;
+  bottom: -200px;
+  left: 450px;
+  z-index: -1;
 }
 .drop-10 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .85;
-    object-fit: fill;
-    height: 150px;
-    width: 150px;
-    bottom: -200px;
-    left: 450px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  object-fit: fill;
+  height: 150px;
+  width: 150px;
+  bottom: -200px;
+  left: 450px;
+  z-index: -1;
 }
 .drop-11 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .85;
-    object-fit: fill;
-    height: 150px;
-    width: 150px;
-    bottom: -200px;
-    left: 450px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  object-fit: fill;
+  height: 150px;
+  width: 150px;
+  bottom: -200px;
+  left: 450px;
+  z-index: -1;
 }
 .drop-12 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .85;
-    object-fit: fill;
-    height: 150px;
-    width: 150px;
-    bottom: -200px;
-    left: 450px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  object-fit: fill;
+  height: 150px;
+  width: 150px;
+  bottom: -200px;
+  left: 450px;
+  z-index: -1;
 }
 .drop-13 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .85;
-    object-fit: fill;
-    height: 150px;
-    width: 150px;
-    bottom: -200px;
-    left: 450px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  object-fit: fill;
+  height: 150px;
+  width: 150px;
+  bottom: -200px;
+  left: 450px;
+  z-index: -1;
 }
 .drop-14 {
-    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: .85;
-    object-fit: fill;
-    height: 150px;
-    width: 150px;
-    bottom: -200px;
-    left: 450px;
-    z-index: -1;
-    
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  object-fit: fill;
+  height: 150px;
+  width: 150px;
+  bottom: -200px;
+  left: 450px;
+  z-index: -1;
 }
-h1, input:focus, select:focus, textarea:focus, button:focus {
-    outline: none;
-}
+h1,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+} */
