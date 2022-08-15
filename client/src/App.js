@@ -9,7 +9,7 @@ import Feed from './pages/Feed'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
 import NewPost from './pages/NewPost'
-
+import { Settings } from './pages/Settings'
 function App() {
   const [authenticated, setAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
@@ -43,6 +43,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile user={user} />} />
           <Route path="/post" element={<NewPost user={user} />} />
+          <Route path="/settings" element={<Settings user={user} />} />
 
           <Route
             path="/login"

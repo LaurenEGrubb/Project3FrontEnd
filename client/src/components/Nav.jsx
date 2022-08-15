@@ -10,6 +10,7 @@ export const Nav = ({ authenticated, user, logOut }) => {
           <Link to="/feed">Feed</Link>
           <Link to="/post"> + </Link>
           <Link to="/profile">Profile</Link>
+          <Link to="/settings">Settings</Link>
           <Link onClick={logOut} to="/">
             Log Out
           </Link>
