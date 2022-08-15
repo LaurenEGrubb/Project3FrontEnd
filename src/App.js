@@ -46,7 +46,10 @@ function App() {
           <Route path="/profile" element={<Profile user={user} />} />
           <Route path="/post" element={<NewPost user={user} />} />
           <Route path="/settings" element={<Settings user={user} />} />
-          <Route path="/feed/:postid" element={<AlbumDetails user={user} />} />
+          <Route
+            path="/feed/:postid"
+            element={<AlbumDetails user={user} authenticated={authenticated} />}
+          />
 
           <Route
             path="/login"
