@@ -56,13 +56,17 @@ const Login = ({ setUser, setAuthenticated }) => {
             Login
           </button>
         </form>
-
+        
         <div class="drops">
             <div class="drop drop-1"></div>
             <div class="drop drop-2"></div>
             <div class="drop drop-3"></div>
             <div class="drop drop-4"></div>
             <div class="drop drop-5"></div>
+            <div class="drop drop-6"></div>
+            <div class="drop drop-7"></div>
+            <div class="drop drop-8"></div>
+            <div class="drop drop-9"></div>
         </div>
     </div>
   )
