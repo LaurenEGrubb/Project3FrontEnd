@@ -24,6 +24,7 @@ export const Nav = ({ authenticated, user, logOut }) => {
       <div className="nav-bar">
         <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
+
         <Link to="/login">Login</Link>
       </div>
     </nav>
