@@ -56,7 +56,7 @@ const Login = ({ setUser, setAuthenticated }) => {
             Login
           </button>
         </form>
-
+        
         <div class="drops">
             <div class="drop drop-1"></div>
             <div class="drop drop-2"></div>
