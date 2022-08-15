@@ -27,9 +27,10 @@ export const UpdatePassword = async (data) => {
   }
 }
 
-export const CheckSession = async () => {
+export const CheckSession = async (data) => {
   try {
-    const res = await Client.post('api/users/session')
+    const res = await Client.get('api/users/session', data)
+    console.log(res.data)
     return res.data
   } catch (error) {
     throw error

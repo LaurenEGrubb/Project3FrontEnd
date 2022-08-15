@@ -5,18 +5,26 @@ export const Nav = ({ authenticated, user, logOut }) => {
   if (user) {
     isAuthenticated = (
       <nav>
-        <h3>Welcome {user.username}</h3>
-        <Link to="/feed">Feed</Link>
-        <Link to="/profile/:userId">Profile</Link>
+        <div className="nav-bar">
+          <h3>Welcome back, {user.firstName}</h3>
+          <Link to="/feed">Feed</Link>
+          <Link to="/post"> + </Link>
+          <Link to="/profile">Profile</Link>
+          <Link onClick={logOut} to="/">
+            Log Out
+          </Link>
+        </div>
       </nav>
     )
   }
 
   const notAuthenticated = (
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="/register">Register</Link>
-      <Link to="/login">Login</Link>
+      <div className="nav-bar">
+        <Link to="/">Home</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/login">Login</Link>
+      </div>
     </nav>
   )
 

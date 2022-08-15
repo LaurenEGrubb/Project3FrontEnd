@@ -1,10 +1,13 @@
 import Client from './api'
+import { useParams } from 'react-router-dom'
 
-export const GetAlbumsByUser = async () => {
+// export const ProfileServices = async () => {
+export const GetAlbumsByUser = async (userId) => {
   try {
-    const res = await Client.get('api/album/:user_id')
+    const res = await Client.get(`api/album/${userId}`)
     return res.data
   } catch (e) {
     throw e
   }
 }
+// }

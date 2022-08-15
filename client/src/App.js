@@ -8,6 +8,7 @@ import Login from './pages/Login'
 import Feed from './pages/Feed'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
+import NewPost from './pages/NewPost'
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false)
@@ -40,7 +41,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profile/:userId" element={<Profile />} />
+          <Route path="/profile" element={<Profile user={user} />} />
+          <Route path="/post" element={<NewPost user={user} />} />
+
           <Route
             path="/login"
             element={
