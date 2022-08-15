@@ -57,12 +57,12 @@ const Login = ({ setUser, setAuthenticated }) => {
           </button>
         </form>
 
-        <div class="poloroids">
-            <div class="poloroid poloroid-1"></div>
-            <div class="poloroid poloroid-2"></div>
-            <div class="poloroid poloroid-3"></div>
-            <div class="poloroid poloroid-4"></div>
-            <div class="poloroid poloroid-5"></div>
+        <div class="drops">
+            <div class="drop drop-1"></div>
+            <div class="drop drop-2"></div>
+            <div class="drop drop-3"></div>
+            <div class="drop drop-4"></div>
+            <div class="drop drop-5"></div>
         </div>
     </div>
   )

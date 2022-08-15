@@ -1,6 +1,10 @@
+
+
 body {
     background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    background-image: url(https://t3.ftcdn.net/jpg/02/50/02/50/360_F_250025026_pGxtX9ruBAf69zkZWG57T2jRCpWdI5Ix.jpg);
+    background-image: url(https://c0.wallpaperflare.com/preview/937/498/462/photographer-camera-photos-insta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     
@@ -32,8 +36,8 @@ form {
 }
 h1 {
     font-weight: 500;
-    color: #FFF;
-    opacity: 0.7;
+    color: rgb(246, 246, 246);
+    opacity: 0.90;
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 60px;
@@ -87,8 +91,11 @@ button:hover {
 button:active {
     background: rgba(255, 255, 255, 0.2)
 }
-.poloroids {
-    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
+.drop {
+    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
     backdrop-filter: blur(10px);
     border-radius: 10px;
     border-left: 1px solid white;
@@ -97,43 +104,63 @@ button:active {
     position: absolute;
     transition: all 0.2s ease;
 }
-.poloroid-1 {
-    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
-    height: 80px;
-    width: 80px;
+.drop-1 {
+    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    height: 77px;
+    width: 70px;
     top: -20px;
     left: -40px;
     z-index: -1;
+    transform: roate(136deg) translate(251px) rotate(-136deg)
 }
-.poloroid-2 {
-    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
+.drop-2 {
+    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+    background-size: cover;
+    object-fit: fill;
+    background-position: center;
     height: 80px;
-    width: 80px;
+    width: 60px;
     bottom: -30px;
     right: -10px;
+    transform: roate(181deg) translate(251px) rotate(-181deg)
 }
-.poloroid-3 {
-    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
+.drop-3 {
+    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: fill;
     height: 100px;
-    width: 100px;
+    width: 90px;
     bottom: 120px;
     right: -50px;
     z-index: -1;
+    transform: roate(226deg) translate(251px) rotate(-226deg)
 }
-.poloroid-4 {
-    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
-    height: 120px;
-    width: 120px;
+.drop-4 {
+    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: fill;
+    height: 115px;
+    width: 90px;
     top: -60px;
     right: -60px;
+    transform: roate(271deg) translate(251px) rotate(-271deg)
 }
-.poloroid-5 {
-    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
+.drop-5 {
+    background-image:url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: fill;
     height: 60px;
     width: 60px;
     bottom: 170px;
     left: 9px;
     z-index: -1;
+    transform: roate(316deg) translate(251px) rotate(-316deg)
 }
 h1, input:focus, select:focus, textarea:focus, button:focus {
     outline: none;
