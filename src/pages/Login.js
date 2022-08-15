@@ -22,11 +22,13 @@ const Login = ({ setUser, setAuthenticated }) => {
   }
 
   return (
+    
     <div class='container'>
-      <div class='segment'>
-        <h1>Login</h1>
-      </div>
-      <div>
+      <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap' rel="App.css"></link>
+       <div class='login'>
+        <h1>Welcome Back</h1>
+        
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="segment">
             <label htmlFor="email">Email</label>
@@ -62,7 +64,6 @@ const Login = ({ setUser, setAuthenticated }) => {
             <div class="poloroid poloroid-4"></div>
             <div class="poloroid poloroid-5"></div>
         </div>
-      </div>
     </div>
   )
 }

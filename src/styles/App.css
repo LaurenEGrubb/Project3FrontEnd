@@ -1,7 +1,9 @@
 body {
     background: linear-gradient(45deg, #FC466B, #3F5EFB);
+    background-image: url(https://t3.ftcdn.net/jpg/02/50/02/50/360_F_250025026_pGxtX9ruBAf69zkZWG57T2jRCpWdI5Ix.jpg);
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
+    
 }
 .container {
     position: absolute;
@@ -11,6 +13,7 @@ body {
 }
 form {
     background: white;
+    opacity: .40;
     padding: 3em;
     height: 320px;
     border-radius: 20px;
@@ -20,14 +23,18 @@ form {
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
     text-align: center;
     position: relative;
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
 
+}
+.login {
+    display: flex;
+    justify-content: center;
 }
 h1 {
     font-weight: 500;
     color: #FFF;
     opacity: 0.7;
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 60px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
@@ -43,7 +50,7 @@ input {
     border-radius: 50000px;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(red, green, blue, alpha);
-    color: #fff;
+    color: black;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
@@ -69,7 +76,9 @@ input[type='password']:focus {
 button {
     margin-top: 10px;
     width: 150px;
+    border-radius: 10%;
     font-size: 1rem;
+    color: black;
 }
 button:hover {
     cursor: pointer;
@@ -79,7 +88,7 @@ button:active {
     background: rgba(255, 255, 255, 0.2)
 }
 .poloroids {
-    background: white;
+    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
     backdrop-filter: blur(10px);
     border-radius: 10px;
     border-left: 1px solid white;
@@ -89,6 +98,7 @@ button:active {
     transition: all 0.2s ease;
 }
 .poloroid-1 {
+    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
     height: 80px;
     width: 80px;
     top: -20px;
@@ -96,12 +106,14 @@ button:active {
     z-index: -1;
 }
 .poloroid-2 {
+    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
     height: 80px;
     width: 80px;
     bottom: -30px;
     right: -10px;
 }
 .poloroid-3 {
+    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
     height: 100px;
     width: 100px;
     bottom: 120px;
@@ -109,15 +121,20 @@ button:active {
     z-index: -1;
 }
 .poloroid-4 {
+    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
     height: 120px;
     width: 120px;
     top: -60px;
     right: -60px;
 }
 .poloroid-5 {
+    background-image:url('https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png');
     height: 60px;
     width: 60px;
     bottom: 170px;
-    left: 9-px;
+    left: 9px;
     z-index: -1;
+}
+h1, input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
 }
