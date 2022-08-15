@@ -9,9 +9,13 @@ export const Settings = () => {
     oldPassword: '',
     newPassword: ''
   })
+  const [showForm, setShowFrom] = useState(false)
 
   const handleChange = (error) => {
     setFormValues({ ...formValues, [error.target.name]: error.target.value })
+  }
+  const toggleShowForm = () => {
+    setShowFrom(!showForm)
   }
 
   const handleSubmit = async (error) => {
@@ -19,52 +23,59 @@ export const Settings = () => {
     const payload = await UpdatePassword(formValues)
     setFormValues({ email: '', password: '', oldPassword: '' })
     navigate('/settings')
+    toggleShowForm()
   }
+
   return (
     <div>
       <div>
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="form-wrap">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="myemail@email.com"
-              value={formValues.email}
-              required
-            />
-          </div>
-          <div className="form-wrap">
-            <label htmlFor="oldPassword">Old Password</label>
-            <input
-              onChange={handleChange}
-              name="oldPassword"
-              type="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <div className="form-wrap">
-            <label htmlFor="newPassword">New Password</label>
-            <input
-              onChange={handleChange}
-              name="newPassword"
-              type="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <button
-            disabled={
-              !formValues.email ||
-              !formValues.oldPassword ||
-              !formValues.newPassword
-            }
-          >
-            Confirm
-          </button>
-        </form>
+        {!showForm && (
+          <button onClick={toggleShowForm}>Change Password?</button>
+        )}
+        {showForm && (
+          <form className="col" onSubmit={handleSubmit}>
+            <div className="form-wrap">
+              <label htmlFor="email">Email</label>
+              <input
+                onChange={handleChange}
+                name="email"
+                type="email"
+                placeholder="myemail@email.com"
+                value={formValues.email}
+                required
+              />
+            </div>
+            <div className="form-wrap">
+              <label htmlFor="oldPassword">Old Password</label>
+              <input
+                onChange={handleChange}
+                name="oldPassword"
+                type="password"
+                value={formValues.password}
+                required
+              />
+            </div>
+            <div className="form-wrap">
+              <label htmlFor="newPassword">New Password</label>
+              <input
+                onChange={handleChange}
+                name="newPassword"
+                type="password"
+                value={formValues.password}
+                required
+              />
+            </div>
+            <button
+              disabled={
+                !formValues.email ||
+                !formValues.oldPassword ||
+                !formValues.newPassword
+              }
+            >
+              Confirm
+            </button>
+          </form>
+        )}
       </div>
     </div>
   )
