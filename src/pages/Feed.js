@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GetAlbums } from '../services/PostServices'
+import { AlbumPhotos } from '../services/PostServices'
 
 const Feed = ({ user, authenticated }) => {
   let navigate = useNavigate()
@@ -13,11 +14,16 @@ const Feed = ({ user, authenticated }) => {
     showPosts()
   }, [])
 
+  const showAlbums = (post) => {
+    let res = AlbumPhotos(post.id)
+    navigate(`${post.id}`)
+  }
+
   return user && authenticated ? (
     <div>
       {posts?.map((post) => (
         <div className="album-card" key={post.id}>
-          <h3>{post.name}</h3>
+          <h3 onClick={() => showAlbums(post)}>{post.name}</h3>
           <p>{post.description}</p>
           <div>
             <img src={post.photoUrl} />
