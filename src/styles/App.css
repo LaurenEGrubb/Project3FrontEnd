@@ -1,0 +1,163 @@
+/* body {
+  background: linear-gradient(45deg, #fc466b, #3f5efb);
+  background-image: url(https://c0.wallpaperflare.com/preview/937/498/462/photographer-camera-photos-insta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+form {
+  background: white;
+  opacity: 0.4;
+  padding: 3em;
+  height: 320px;
+  border-radius: 20px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.login {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  font-weight: 500;
+  color: rgb(246, 246, 246);
+  opacity: 0.9;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+input {
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 50000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(red, green, blue, alpha);
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:hover {
+  background: rgba(225, 225, 225, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+input[type='email']:focus {
+  background: rgba(225, 225, 225, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+input[type='password']:focus {
+  background: rgba(225, 225, 225, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+button {
+  margin-top: 10px;
+  width: 150px;
+  border-radius: 10%;
+  font-size: 1rem;
+  color: black;
+}
+button:hover {
+  cursor: pointer;
+  margin: 4px;
+}
+button:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.drop {
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.2s ease;
+}
+.drop-1 {
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  height: 77px;
+  width: 70px;
+  top: -20px;
+  left: -40px;
+  z-index: -1;
+  transform: roate(136deg) translate(251px) rotate(-136deg);
+}
+.drop-2 {
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  height: 80px;
+  width: 60px;
+  bottom: -30px;
+  right: -10px;
+  transform: roate(181deg) translate(251px) rotate(-181deg);
+}
+.drop-3 {
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  object-fit: fill;
+  height: 100px;
+  width: 90px;
+  bottom: 120px;
+  right: -50px;
+  z-index: -1;
+  transform: roate(226deg) translate(251px) rotate(-226deg);
+}
+.drop-4 {
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  object-fit: fill;
+  height: 115px;
+  width: 90px;
+  top: -60px;
+  right: -60px;
+  transform: roate(271deg) translate(251px) rotate(-271deg);
+}
+.drop-5 {
+  background-image: url(https://www.pngall.com/wp-content/uploads/5/Polaroid-PNG-Photo.png);
+  background-size: cover;
+  background-position: center;
+  object-fit: fill;
+  height: 60px;
+  width: 60px;
+  bottom: 170px;
+  left: 9px;
+  z-index: -1;
+  transform: roate(316deg) translate(251px) rotate(-316deg);
+}
+h1,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+} */

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { GetAlbumsByUser } from '../services/ProfileServices'
 import { useParams } from 'react-router-dom'
 
@@ -26,7 +26,9 @@ const Profile = ({ user }) => {
             <h3>{post.name}</h3>
             <p>{post.description}</p>
             <div>
-              <img src={post.photoUrl} />
+              <Link to={`/feed/${post.id}`}>
+                <img src={post.photoUrl} />
+              </Link>
             </div>
           </div>
         ))}
