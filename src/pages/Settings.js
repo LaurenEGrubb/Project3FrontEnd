@@ -32,6 +32,7 @@ export const Settings = () => {
         {!showForm && (
           <button onClick={toggleShowForm}>Change Password?</button>
         )}
+        <button>Delete Your Account?</button>
         {showForm && (
           <form className="col" onSubmit={handleSubmit}>
             <div className="form-wrap">
