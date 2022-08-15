@@ -12,7 +12,7 @@ const Profile = ({ user }) => {
   useEffect(() => {
     const showPosts = async () => {
       const data = await GetAlbumsByUser(user.id)
-      console.log(data)
+
       setPosts(data)
     }
     showPosts()
