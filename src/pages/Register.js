@@ -1,19 +1,9 @@
-import { useState } from 'react'
-import { RegisterUser } from '../services/Auth'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react';
+import { RegisterUser } from '../services/Auth';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-  let navigate = useNavigate()
-  const [formValues, setFormValues] = useState({
-    firstName: '',
-    lastName: '',
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    profilePicture: ''
-  })
-
+  let navigate = useNavigate();
   const initialFormState = {
     firstName: '',
     lastName: '',
@@ -21,15 +11,18 @@ const Register = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    profilePicture: ''
-  }
+    profilePicture: (
+      <img src="https://i1.wp.com/wilcity.com/wp-content/uploads/2020/06/115-1150152_default-profile-picture-avatar-png-green.jpg?fit=820%2C860&ssl=1" />
+    )
+  };
+  const [formValues, setFormValues] = useState({ initialFormState });
 
   const handleChange = (error) => {
-    setFormValues({ ...formValues, [error.target.name]: error.target.value })
-  }
+    setFormValues({ ...formValues, [error.target.name]: error.target.value });
+  };
 
   const handleSubmit = async (error) => {
-    error.preventDefault()
+    error.preventDefault();
     await RegisterUser({
       firstName: formValues.firstName,
       lastName: formValues.lastName,
@@ -37,10 +30,10 @@ const Register = () => {
       email: formValues.email,
       password: formValues.password,
       profilePicture: formValues.profilePicture
-    })
-    setFormValues(initialFormState)
-    navigate('/login')
-  }
+    });
+    setFormValues(initialFormState);
+    navigate('/login');
+  };
 
   return (
     <div>
@@ -131,7 +124,7 @@ const Register = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
