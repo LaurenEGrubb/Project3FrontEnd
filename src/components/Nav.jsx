@@ -6,10 +6,15 @@ export const Nav = ({ authenticated, user, logOut }) => {
     isAuthenticated = (
       <nav>
         <div className="nav-bar">
+          <img src={user.profilePicture} />
           <h3>Welcome back, {user.firstName}</h3>
+
           <Link to="/feed">Feed</Link>
           <Link to="/post"> + </Link>
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile">
+            Profile
+            {/* <img src={user.profilePicture} alt="" /> */}
+          </Link>
           <Link to="/settings">Settings</Link>
           <Link onClick={logOut} to="/">
             Log Out

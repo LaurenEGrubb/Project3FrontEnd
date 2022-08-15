@@ -32,7 +32,7 @@ const NewPost = ({ user }) => {
       description: '',
       photoUrl: ''
     })
-    navigate('/feed/:postid')
+    navigate('/feed')
   }
 
   return (

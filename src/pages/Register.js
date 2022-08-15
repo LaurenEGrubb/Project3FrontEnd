@@ -10,7 +10,8 @@ const Register = () => {
     username: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    profilePicture: ''
   })
 
   const initialFormState = {
@@ -19,7 +20,8 @@ const Register = () => {
     username: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    profilePicture: ''
   }
 
   const handleChange = (error) => {
@@ -33,7 +35,8 @@ const Register = () => {
       lastName: formValues.lastName,
       username: formValues.lastName,
       email: formValues.email,
-      password: formValues.password
+      password: formValues.password,
+      profilePicture: formValues.profilePicture
     })
     setFormValues(initialFormState)
     navigate('/login')
@@ -43,6 +46,15 @@ const Register = () => {
     <div>
       <div>
         <form className="col" onSubmit={handleSubmit}>
+          <div className="form-wrap">
+            <label htmlFor="profilePicture">Add Profile Picture URL</label>
+            <input
+              onChange={handleChange}
+              name="profilePicture"
+              type="text"
+              value={formValues.profilePicture}
+            />
+          </div>
           <div className="form-wrap">
             <label htmlFor="firstName">First Name</label>
             <input
