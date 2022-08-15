@@ -88,3 +88,36 @@ button:active {
     position: absolute;
     transition: all 0.2s ease;
 }
+.poloroid-1 {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+    z-index: -1;
+}
+.poloroid-2 {
+    height: 80px;
+    width: 80px;
+    bottom: -30px;
+    right: -10px;
+}
+.poloroid-3 {
+    height: 100px;
+    width: 100px;
+    bottom: 120px;
+    right: -50px;
+    z-index: -1;
+}
+.poloroid-4 {
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    right: -60px;
+}
+.poloroid-5 {
+    height: 60px;
+    width: 60px;
+    bottom: 170px;
+    left: 9-px;
+    z-index: -1;
+}
