@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
+import react from 'react'
+import '../styles/App.css'
 
 const Login = ({ setUser, setAuthenticated }) => {
   let navigate = useNavigate()
@@ -20,26 +22,32 @@ const Login = ({ setUser, setAuthenticated }) => {
   }
 
   return (
-    <div>
-      <div>
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="form-wrap">
+    
+    <div class='container'>
+      <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap' rel="App.css"></link>
+       <div class='login'>
+        <h1>Welcome Back</h1>
+        
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="segment">
             <label htmlFor="email">Email</label>
             <input
               onChange={handleChange}
               name="email"
               type="email"
-              placeholder="myemail@email.com"
+              placeholder="Email Address"
               value={formValues.email}
               required
             />
           </div>
-          <div className="form-wrap">
+          <div className="segment">
             <label htmlFor="password">Password</label>
             <input
               onChange={handleChange}
               name="password"
               type="password"
+              placeholder='Password'
               value={formValues.password}
               required
             />
@@ -48,7 +56,14 @@ const Login = ({ setUser, setAuthenticated }) => {
             Login
           </button>
         </form>
-      </div>
+
+        <div class="drops">
+            <div class="drop drop-1"></div>
+            <div class="drop drop-2"></div>
+            <div class="drop drop-3"></div>
+            <div class="drop drop-4"></div>
+            <div class="drop drop-5"></div>
+        </div>
     </div>
   )
 }
