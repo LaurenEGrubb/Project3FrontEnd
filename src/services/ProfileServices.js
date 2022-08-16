@@ -18,3 +18,11 @@ export const DeleteAlbum = async (albumId) => {
     throw e
   }
 }
+export const DeletePhoto = async (photoId) => {
+  try {
+    const res = await Client.delete(`api/photo/${photoId}`)
+    return res.data
+  } catch (e) {
+    throw e
+  }
+}

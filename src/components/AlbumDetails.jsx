@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import NewPhoto from '../pages/NewPhoto'
-
+import { DeletePhoto } from '../services/ProfileServices'
 import { AlbumPhotos, NewAlbum } from '../services/PostServices'
 
 const AlbumDetails = ({ user, authenticated }) => {
   const [album, setAlbum] = useState([])
   let { postid } = useParams()
+  const [deletePhoto, setDeletePhoto] = useState(false)
+
+  const photoDelete = async (photoId) => {
+    const res = await DeletePhoto(photoId)
+    setDeletePhoto(true)
+  }
 
   const showPhotos = async () => {
     const data = await AlbumPhotos(postid)
@@ -15,23 +21,24 @@ const AlbumDetails = ({ user, authenticated }) => {
   }
   useEffect(() => {
     showPhotos()
-  }, [])
+  }, [deletePhoto])
 
   return user && authenticated ? (
     <div>
+      <NewPhoto album={album} user={user} showPhotos={showPhotos} />
+
       <h1>{album.name}</h1>
       <h2>{album.description}</h2>
       {album.photos?.map((photo) => (
         <div className="photo-card" key={photo.id}>
-          <h3>{photo.name}</h3>
-          <p>{photo.description}</p>
-
           <div>
             <img src={photo.photoUrl} />
           </div>
+          <h3>{photo.name}</h3>
+          <p>{photo.description}</p>
+          <button onClick={() => photoDelete(photo.id)}>X</button>
         </div>
       ))}
-      <NewPhoto album={album} user={user} showPhotos={showPhotos} />
     </div>
   ) : (
     <div>
