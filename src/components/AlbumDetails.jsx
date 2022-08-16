@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
-import { AlbumPhotos } from '../services/PostServices'
+import NewPhoto from '../pages/NewPhoto'
+
+import { AlbumPhotos, NewAlbum } from '../services/PostServices'
 
 const AlbumDetails = ({ user, authenticated }) => {
   const [album, setAlbum] = useState([])
   let { postid } = useParams()
+
   useEffect(() => {
     const showPhotos = async () => {
       const data = await AlbumPhotos(postid)
@@ -16,15 +19,19 @@ const AlbumDetails = ({ user, authenticated }) => {
 
   return user && authenticated ? (
     <div>
+      <h1>{album.name}</h1>
+      <h2>{album.description}</h2>
       {album.photos?.map((photo) => (
         <div className="photo-card" key={photo.id}>
           <h3>{photo.name}</h3>
           <p>{photo.description}</p>
+
           <div>
             <img src={photo.photoUrl} />
           </div>
         </div>
       ))}
+      <NewPhoto album={album} user={user} />
     </div>
   ) : (
     <div>

@@ -27,9 +27,19 @@ export const AlbumPhotos = async (albumId) => {
     throw e
   }
 }
-export const PostPhoto = async (albumId) => {
+
+export const PostPhoto = async (data, albumId) => {
   try {
-    const res = await Client.post(`api/album/${albumId}`)
+    const res = await Client.post(`api/album/${albumId}`, data)
+    return res.data
+  } catch (e) {
+    throw e
+  }
+}
+
+export const EditAlbum = async (data, albumId) => {
+  try {
+    const res = await Client.put(`api/album/${albumId}`, data)
     return res.data
   } catch (e) {
     throw e

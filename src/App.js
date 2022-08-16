@@ -12,6 +12,7 @@ import NewPost from './pages/NewPost'
 import { Settings } from './pages/Settings'
 import AlbumDetails from './components/AlbumDetails'
 import { useParams } from 'react-router-dom'
+import NewPhoto from './pages/NewPhoto'
 function App() {
   const [authenticated, setAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
@@ -46,6 +47,7 @@ function App() {
           <Route path="/profile" element={<Profile user={user} />} />
           <Route path="/post" element={<NewPost user={user} />} />
           <Route path="/settings" element={<Settings user={user} />} />
+          <Route path="/newphoto" element={<NewPhoto user={user} />} />
           <Route
             path="/feed/:postid"
             element={<AlbumDetails user={user} authenticated={authenticated} />}
