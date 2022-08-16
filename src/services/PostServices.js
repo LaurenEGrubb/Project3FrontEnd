@@ -30,7 +30,7 @@ export const AlbumPhotos = async (albumId) => {
 
 export const PostPhoto = async (data, albumId) => {
   try {
-    const res = await Client.post(`api/album/${albumId}`, data)
+    const res = await Client.post(`api/photo/${albumId}`, data)
     return res.data
   } catch (e) {
     throw e

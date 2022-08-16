@@ -8,12 +8,12 @@ const AlbumDetails = ({ user, authenticated }) => {
   const [album, setAlbum] = useState([])
   let { postid } = useParams()
 
+  const showPhotos = async () => {
+    const data = await AlbumPhotos(postid)
+    console.log(data)
+    setAlbum(data)
+  }
   useEffect(() => {
-    const showPhotos = async () => {
-      const data = await AlbumPhotos(postid)
-      console.log(data)
-      setAlbum(data)
-    }
     showPhotos()
   }, [])
 
@@ -31,7 +31,7 @@ const AlbumDetails = ({ user, authenticated }) => {
           </div>
         </div>
       ))}
-      <NewPhoto album={album} user={user} />
+      <NewPhoto album={album} user={user} showPhotos={showPhotos} />
     </div>
   ) : (
     <div>

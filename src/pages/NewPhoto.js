@@ -2,7 +2,7 @@ import { PostPhoto } from '../services/PostServices'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import { AlbumPhotos } from '../services/PostServices'
-const NewPhoto = ({ album, user }) => {
+const NewPhoto = ({ album, user, showPhotos }) => {
   let navigate = useNavigate()
   const [addPhoto, setAddPhoto] = useState({
     name: '',
@@ -10,15 +10,6 @@ const NewPhoto = ({ album, user }) => {
     photoUrl: ''
   })
   const [photo, setPhoto] = useState([])
-  // useEffect(() => {
-  //   const showPhotos = async () => {
-  //     const data = await PostPhoto(album.id)
-
-  //     setPhoto(data)
-  //   }
-  //   showPhotos()
-  // }, [])
-  // const [newPost, setNewPost] = useState(defaultPost)
 
   const handleChange = (e) => {
     setAddPhoto({ ...addPhoto, [e.target.name]: e.target.value })
@@ -40,7 +31,7 @@ const NewPhoto = ({ album, user }) => {
       description: '',
       photoUrl: ''
     })
-    navigate(`/feed/${album.id}`)
+    showPhotos()
   }
   return (
     <div>

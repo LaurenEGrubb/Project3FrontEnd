@@ -2,16 +2,23 @@ import { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { GetAlbumsByUser, DeleteAlbum } from '../services/ProfileServices'
 import { useParams } from 'react-router-dom'
+import { EditAlbum } from '../services/PostServices'
+import EditOneAlbum from './EditOneAlbum'
 
 const Profile = ({ user }) => {
-  // let { userId } = useParams()
-
-  // console.log(user.id)
   let navigate = useNavigate()
+  const [editAlbum, setEditAlbum] = useState(false)
   const [posts, setPosts] = useState([])
+  const [deletePost, setDeletePost] = useState(false)
   const deleteAlbum = async (postId) => {
     const res = await DeleteAlbum(postId)
+    setDeletePost(true)
   }
+
+  const toggleAlbum = () => {
+    setEditAlbum(!editAlbum)
+  }
+
   useEffect(() => {
     const showPosts = async () => {
       const data = await GetAlbumsByUser(user.id)
@@ -19,7 +26,7 @@ const Profile = ({ user }) => {
       setPosts(data)
     }
     showPosts()
-  }, []) //posts in is an infinite loop. Does what I want but puts me in a loop. Why?
+  }, [deletePost]) //posts in is an infinite loop. Does what I want but puts me in a loop. Why?
 
   return (
     <div>
@@ -33,6 +40,11 @@ const Profile = ({ user }) => {
                 <img src={post.photoUrl} />
               </Link>
               <button onClick={() => deleteAlbum(post.id)}>X</button>
+              <div></div>
+              {/* {!editAlbum && <button onClick={toggleAlbum}>Edit</button>}
+              {editAlbum && (
+                <EditOneAlbum posts={posts} toggleAlbum={toggleAlbum} />
+              )} */}
             </div>
           </div>
         ))}
