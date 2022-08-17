@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import NewPhoto from '../pages/NewPhoto'
 import { DeletePhoto } from '../services/ProfileServices'
 import { AlbumPhotos, NewAlbum } from '../services/PostServices'
+import EditOneAlbum from '../pages/EditOneAlbum'
 
 const AlbumDetails = ({ user, authenticated }) => {
   const [album, setAlbum] = useState([])
@@ -23,7 +24,10 @@ const AlbumDetails = ({ user, authenticated }) => {
     showPhotos()
   }, [deletePhoto])
 
-  return user && authenticated ? (
+  const userAuthor = user.id === album.userId && authenticated
+  const isVerified = user && authenticated
+
+  return isVerified ? (
     <div>
       <NewPhoto album={album} user={user} showPhotos={showPhotos} />
 
@@ -36,11 +40,18 @@ const AlbumDetails = ({ user, authenticated }) => {
           </div>
           <h3>{photo.name}</h3>
           <p>{photo.description}</p>
-          <button onClick={() => photoDelete(photo.id)}>X</button>
+          {userAuthor ? (
+            <div>
+              <button onClick={() => photoDelete(photo.id)}>X</button>
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
       ))}
     </div>
   ) : (
+    // ) : userAuthor ? (<button onClick={() => photoDelete(photo.id)}>X</button>
     <div>
       <h2>You must be signed in to access the feed! Sign in or sign up here</h2>{' '}
       //add button to sign in or go to sign up

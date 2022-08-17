@@ -2,7 +2,6 @@ import { PostPhoto } from '../services/PostServices'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import { AlbumPhotos } from '../services/PostServices'
-import { DeletePhoto } from '../services/ProfileServices'
 
 const NewPhoto = ({ album, user, showPhotos }) => {
   let navigate = useNavigate()
@@ -13,18 +12,10 @@ const NewPhoto = ({ album, user, showPhotos }) => {
   })
   const [photo, setPhoto] = useState([])
   const [newPhoto, setNewPhoto] = useState(false)
-  const [deletPhoto, setDeletePhoto] = useState(false)
-
-  const deletePhoto = async (photoId) => {
-    const res = await DeletePhoto(photoId)
-    setDeletePhoto(true)
-  }
 
   const toggleShowForm = () => {
     setNewPhoto(!newPhoto)
   }
-
-  useEffect(() => {}, [deletePhoto])
 
   const handleChange = (e) => {
     setAddPhoto({ ...addPhoto, [e.target.name]: e.target.value })
@@ -88,7 +79,6 @@ const NewPhoto = ({ album, user, showPhotos }) => {
           <button>Post</button>
         </form>
       )}
-      <button onClick={() => deletePhoto(photo.id)}>X</button>
     </div>
   )
 }

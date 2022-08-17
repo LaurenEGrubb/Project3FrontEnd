@@ -41,10 +41,10 @@ const Profile = ({ user }) => {
               </Link>
               <button onClick={() => deleteAlbum(post.id)}>X</button>
               <div></div>
-              {/* {!editAlbum && <button onClick={toggleAlbum}>Edit</button>}
+              {!editAlbum && <button onClick={toggleAlbum}>Edit</button>}
               {editAlbum && (
                 <EditOneAlbum posts={posts} toggleAlbum={toggleAlbum} />
-              )} */}
+              )}
             </div>
           </div>
         ))}
