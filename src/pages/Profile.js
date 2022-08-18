@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { GetAlbumsByUser, DeleteAlbum } from '../services/ProfileServices'
 import { useParams } from 'react-router-dom'
 import { EditAlbum } from '../services/PostServices'
-import EditOneAlbum from './EditOneAlbum'
+import EditPost from './EditPost'
 
 const Profile = ({ user }) => {
   let navigate = useNavigate()
@@ -26,7 +26,7 @@ const Profile = ({ user }) => {
       setPosts(data)
     }
     showPosts()
-  }, [deletePost]) //posts in is an infinite loop. Does what I want but puts me in a loop. Why?
+  }, [deletePost, editAlbum]) //posts in is an infinite loop. Does what I want but puts me in a loop. Why?
 
   return (
     <div>
@@ -35,16 +35,16 @@ const Profile = ({ user }) => {
           <div className="album-card" key={post.id}>
             <h3>{post.name}</h3>
             <p>{post.description}</p>
+
+            <Link to={`/feed/${post.id}`}>
+              <img src={post.photoUrl} />
+            </Link>
+            <Link to={`/edit/${post.id}`}>Edit Post</Link>
+            {/* <EditPost posts={posts} /> */}
+
             <div>
-              <Link to={`/feed/${post.id}`}>
-                <img src={post.photoUrl} />
-              </Link>
               <button onClick={() => deleteAlbum(post.id)}>X</button>
               <div></div>
-              {!editAlbum && <button onClick={toggleAlbum}>Edit</button>}
-              {editAlbum && (
-                <EditOneAlbum posts={posts} toggleAlbum={toggleAlbum} />
-              )}
             </div>
           </div>
         ))}

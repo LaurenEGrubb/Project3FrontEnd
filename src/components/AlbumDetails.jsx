@@ -3,7 +3,6 @@ import { useParams } from 'react-router'
 import NewPhoto from '../pages/NewPhoto'
 import { DeletePhoto } from '../services/ProfileServices'
 import { AlbumPhotos, NewAlbum } from '../services/PostServices'
-import EditOneAlbum from '../pages/EditOneAlbum'
 
 const AlbumDetails = ({ user, authenticated }) => {
   const [album, setAlbum] = useState([])
@@ -30,7 +29,6 @@ const AlbumDetails = ({ user, authenticated }) => {
   return isVerified ? (
     <div>
       <NewPhoto album={album} user={user} showPhotos={showPhotos} />
-
       <h1>{album.name}</h1>
       <h2>{album.description}</h2>
       {album.photos?.map((photo) => (

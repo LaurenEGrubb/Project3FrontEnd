@@ -1,19 +1,8 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
-
 const Register = () => {
   let navigate = useNavigate()
-  const [formValues, setFormValues] = useState({
-    firstName: '',
-    lastName: '',
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    profilePicture: ''
-  })
-
   const initialFormState = {
     firstName: '',
     lastName: '',
@@ -23,11 +12,10 @@ const Register = () => {
     confirmPassword: '',
     profilePicture: ''
   }
-
+  const [formValues, setFormValues] = useState({ initialFormState })
   const handleChange = (error) => {
     setFormValues({ ...formValues, [error.target.name]: error.target.value })
   }
-
   const handleSubmit = async (error) => {
     error.preventDefault()
     await RegisterUser({
@@ -41,10 +29,10 @@ const Register = () => {
     setFormValues(initialFormState)
     navigate('/login')
   }
-
   return (
     <div>
-      <div>
+      <div class="register">
+        <h1>Register</h1>
         <form className="col" onSubmit={handleSubmit}>
           <div className="form-wrap">
             <label htmlFor="profilePicture">Add Profile Picture URL</label>
@@ -89,7 +77,7 @@ const Register = () => {
             />
           </div>
           <div className="form-wrap">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email Address</label>
             <input
               onChange={handleChange}
               name="email"
@@ -133,5 +121,4 @@ const Register = () => {
     </div>
   )
 }
-
 export default Register
