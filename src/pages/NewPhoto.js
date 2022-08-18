@@ -47,7 +47,7 @@ const NewPhoto = ({ album, user, showPhotos }) => {
             />
           </div>
           <div className="form-wrap">
-            <label htmlFor="description">Caption</label>
+            <label htmlFor="description">Caption </label>
             <input
               onChange={(e) => setDescription(e.target.value)}
               name="description"
