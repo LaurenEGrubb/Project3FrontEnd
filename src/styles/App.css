@@ -2,16 +2,32 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+* {
+  margin: 0;
+  padding: 0;
+
 }
+
+/* .root { */
+/* width: 960px; */
+/* margin: 0 auto; */
+/* position: relative; */
+/* } */
 
 body {
   background-image: url(https://www.pixel4k.com/wp-content/uploads/2018/10/dark-night-mountains-minimalist-4k_1540756023.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 150vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   font-family: 'Montserrat', sans-serif;
+  /* width: 960px; */
+  margin: 0 auto;
+  position: relative;
 }
+/* Containers */
 .container {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -22,34 +38,83 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
 }
-form {
-  background: rgb(38, 37, 37);
-  opacity: 0.45;
-  padding: 3em;
-  height: 15vh;
-  width: 8vw;
-  border-radius: 20px;
-  border-left: 1px solid white;
-  border-top: 1px solid white;
-  backdrop-filter: blur(10px);
-  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-  display: flex;
+.pagewrap {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  transition: all 0.5s ease-in-out;
+}
+
+/* Forms */
+.settingbox {
+  height: 15vh;
+  width: 15vw;
+  padding: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
   background: rgb(132, 130, 130);
-  opacity: 0.6;
-  padding: 3em;
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   border-left: 1px solid white;
   border-top: 1px solid white;
   backdrop-filter: blur(10px);
   box-shadow: -6px -6px 6px rgba(28, 24, 24, 0.8),
     6px 6px 6px rgba(5, 5, 5, 0.2);
-  text-align: center;
+  align-items: center;
+}
+/*this is for input and labels for the password*/
+.newpassword {
+  height: 10%;
+  width: 50%;
+  align-self: center;
+  background: transparent;
+  border-radius: 50000px;
+}
+.postform {
+  height: 25vh;
+  width: 25vw;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background: rgb(132, 130, 130);
+  border-radius: 20px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+}
+.postpage {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+/* for the input and label for the settings post page*/
+.newpost {
+  height: 10%;
+  width: 50%;
+  align-self: center;
+  background: transparent;
+  border-radius: 50000px;
+}
+
+.deletebutton {
+  opacity: 0;
+  z-index: -2;
+}
+
+.menu-btn {
   position: relative;
-  transition: all 0.2s ease-in-out;
+  height: 10%;
+  width: 45%;
 }
 .login {
   display: flex;
@@ -65,34 +130,7 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   align-self: center;
 }
-input {
-  background: transparent;
-  width: 12.5rem;
-  padding: 1.25rem 0.3125rem 0.625rem 0.3125rem;
-  margin-bottom: 2em;
-  border: none;
-  background-color: rgb(114, 113, 113);
-  border-left: 1px solid rgb(48, 40, 40);
-  border-top: 1px solid rgb(48, 40, 40);
-  border-radius: 50000px;
-  color: black;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  transition: all 0.5s ease-in-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-input:hover {
-  background: rgba(225, 225, 225, 0.1);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
-input[type='email']:focus {
-  background: rgba(35, 27, 27, 0.278);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
-input[type='password']:focus {
-  background: rgba(35, 27, 27, 0.278);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
+
 .buttoncontainer {
   display: flex;
   justify-content: center;
@@ -125,45 +163,12 @@ button:focus {
 .register {
   position: absolute;
   transform: translate(-50%, -50%);
-  height: 800px;
+  height: 50vh;
+  width: 30vw;
+  overflow: hidden;
   top: 50%;
   left: 50%;
   overflow: auto;
-}
-.col {
-  height: 600vh;
-  width: 10vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.loginform {
-  height: 15vh;
-  width: 15vw;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-.postform {
-  height: 50vh;
-  width: 50vw;
-  padding-top: 5em;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-.postpage {
-  height: 100vh;
-  width: 100vw;
-  display: block;
-  justify-content: center;
-  text-align: center;
-  align-content: center;
 }
 .segment {
   display: flex;
@@ -211,18 +216,18 @@ segment.logininput {
 }
 
 .navbar {
-  width: 99vw;
+  width: 100vw;
   height: 15vh;
+  position: relative;
   background-color: #4c4c4c;
-  backdrop-filter: (5px);
+  /* backdrop-filter: (5px); */
   opacity: 0.45;
   border: 2px solid rgba(7, 4, 4, 0.648);
   box-shadow: 4px 4px 6px 0 rgba(7, 1, 1, 0.872), -4px -4px 6px rgb(0, 0, 0);
   border-radius: 0 0 10px 10px;
   display: flex;
-  justify-content: flex-start;
   align-items: flex-start;
-  padding: 0 3rem;
+  /* padding: 5% 50%; */
   padding-right: 0%;
   list-style-type: none;
   z-index: 2;
@@ -267,36 +272,6 @@ h3 {
     -4px -4px 10px rgba(255, 255, 255, 1) inset;
 }
 
-.menu-btn {
-  background-color: #040008;
-  height: 3px;
-  width: 3px;
-  text-align: center;
-  opacity: 0;
-  color: #424041;
-  padding: 5em;
-  font-size: 4px;
-  font-weight: bolder;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: none;
-  transform: translate(5400%, -200%);
-  z-index: -1;
-}
-.dropdown-menu {
-  position: relative;
-  display: inline-block;
-}
-.menu-content {
-  display: none;
-  position: absolute;
-  background-color: #16161686;
-  opacity: 0.75;
-  min-width: 25rem;
-  width: 1rem;
-  z-index: 1;
-  transform: translate(450%, -140%);
-}
-
 .links,
 .links-hidden {
   display: inline-block;
@@ -315,14 +290,13 @@ h3 {
   display: block;
 }
 img {
-  position: absolute;
-  left: 5%;
-  top: 6.5%;
-  height: 5rem;
-  width: 5rem;
+  position: relative;
+  max-width: 10vw;
+  max-height: 10vh;
+  /*height: 10%;
+  width: 10%; */
   border: 1px solid black;
   border-radius: 50%;
-  transform: (-3000, -3000);
 }
 label {
   background-color: rgb(132, 130, 130);
@@ -367,4 +341,4 @@ label {
   justify-content: center;
   align-content: right;
   right: -50%;
-} */
+}

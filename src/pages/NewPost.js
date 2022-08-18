@@ -38,43 +38,56 @@ const NewPost = ({ user }) => {
 
   return (
     <div>
-      {!newAlbum && <button onClick={toggleShowForm}>Make New Album</button>}
-      {newAlbum && (
-        <div className="postpage">
-          <form className="postform" onSubmit={handleSubmit}>
-            <div className="form-wrap">
-              <label htmlFor="name">Album Name</label>
+      <div className="pagewrap">
+        {!newAlbum && <button onClick={toggleShowForm}>Make New Album</button>}
+        {newAlbum && (
+          <div className="postpage">
+            <form className="postform" onSubmit={handleSubmit}>
+              <div className="form-wrap">
+                <label class="newpost" id="labelpost" htmlFor="name">
+                  Album Name
+                </label>
+                <input
+                  class="newpost"
+                  onChange={(e) => setName(e.target.value)}
+                  name="name"
+                  type="text"
+                  value={name}
+                  required
+                />
+              </div>
+              <div className="form-wrap">
+                <label class="newpost" id="labelpost" htmlFor="description">
+                  Caption
+                </label>
+
+                <input
+                  class="newpost"
+                  onChange={(e) => setDescription(e.target.value)}
+                  name="description"
+                  type="text"
+                  value={description}
+                  required
+                />
+              </div>
+
+              <label class="newpost" htmlFor="photoUrl" id="labelpost">
+                Image
+              </label>
               <input
-                onChange={(e) => setName(e.target.value)}
-                name="name"
-                type="text"
-                value={name}
-                required
-              />
-            </div>
-            <div className="form-wrap">
-              <label htmlFor="description">Caption</label>
-              <input
-                onChange={(e) => setDescription(e.target.value)}
-                name="description"
-                type="text"
-                value={description}
-                required
-              />
-            </div>
-            <div className="form-wrap">
-              <label htmlFor="photoUrl">Image</label>
-              <input
+                class="newpost"
                 onChange={(e) => setPhotoUrl(e.target.files[0])}
                 name="photoUrl"
                 type="file"
                 required
               />
-            </div>
-            <button>Post</button>
-          </form>
-        </div>
-      )}
+              <div className="buttoncontainer">
+                <button>Post</button>
+              </div>
+            </form>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
