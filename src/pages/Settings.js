@@ -35,9 +35,9 @@ export const Settings = () => {
                 Change Password?
               </button>
             )}
-              <button className="hoverbutton">Delete Your Account?</button>
+              <button className="deletebutton">Delete Your Account?</button>
             {showForm && (
-              <form className="dropdown-content" onSubmit={handleSubmit}>
+              <form className="settingbox" onSubmit={handleSubmit}>
                 <div className="form-wrap">
                   <label htmlFor="email">Email</label>
                   <input
