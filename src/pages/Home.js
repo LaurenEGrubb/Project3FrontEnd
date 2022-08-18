@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom'
 const Home = () => {
   let navigate = useNavigate()
   return (
-    <section>
-      <h1>Picture Perfect</h1>
+    <section className="home-page-logo">
+      <h1>
+        <img src="https://i.imgur.com/FjsZOji.png" />
+      </h1>
     </section>
   )
 }

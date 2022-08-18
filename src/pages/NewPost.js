@@ -93,5 +93,4 @@ const NewPost = ({ user }) => {
     </div>
   )
 }
-
 export default NewPost
