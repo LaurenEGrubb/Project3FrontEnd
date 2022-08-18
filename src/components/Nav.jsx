@@ -8,7 +8,7 @@ export const Nav = ({ authenticated, user, logOut }) => {
         <div className="navbar">
           <div class="greeting-container">
             <h3>Welcome back, {user.firstName}</h3>
-            <img src={user.profilePicture} />
+            <img className= "profilepicture"src={user.profilePicture} />
             <div class="dropdowncontent">
               <Link to="/feed" class="links">
                 Feed

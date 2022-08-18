@@ -25,7 +25,7 @@ const Login = ({ setUser, setAuthenticated }) => {
         <h1>Welcome Back</h1>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="segment">
+          <div className="form-wrap">
             <label htmlFor="email">Email</label>
             <input
               onChange={handleChange}
@@ -36,7 +36,7 @@ const Login = ({ setUser, setAuthenticated }) => {
               required
             />
           </div>
-          <div className="segment">
+          <div className="form-wrap">
             <label htmlFor="password">Password</label>
             <input
               onChange={handleChange}

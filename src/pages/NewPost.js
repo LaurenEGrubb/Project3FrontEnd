@@ -38,12 +38,12 @@ const NewPost = ({ user }) => {
 
   return (
     <div>
-      <div className="pagewrap">
+      <div className="pagewrap-newpost">
         {!newAlbum && <button onClick={toggleShowForm}>Make New Album</button>}
         {newAlbum && (
           <div className="postpage">
             <form className="postform" onSubmit={handleSubmit}>
-              <div className="form-wrap">
+              
                 <label class="newpost" id="labelpost" htmlFor="name">
                   Album Name
                 </label>
@@ -55,8 +55,8 @@ const NewPost = ({ user }) => {
                   value={name}
                   required
                 />
-              </div>
-              <div className="form-wrap">
+              
+              
                 <label class="newpost" id="labelpost" htmlFor="description">
                   Caption
                 </label>
@@ -69,7 +69,7 @@ const NewPost = ({ user }) => {
                   value={description}
                   required
                 />
-              </div>
+             
 
               <label class="newpost" htmlFor="photoUrl" id="labelpost">
                 Image

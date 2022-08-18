@@ -32,11 +32,11 @@ const Register = () => {
   };
   return (
     <div>
-      <div className="pagewrap">
+      <div className="pagewrap-register">
         <div class="register">
           <h1>Register</h1>
           <form className="col" onSubmit={handleSubmit}>
-            <div className="form-wrap">
+            <div className="form-wrap-register">
               <label htmlFor="profilePicture">Add Profile Picture URL</label>
               <input
                 onChange={(e) => setProfilePicture(e.target.files[0])}
@@ -44,7 +44,7 @@ const Register = () => {
                 type="file"
               />
             </div>
-            <div className="form-wrap">
+            <div className="form-wrap-register">
               <label htmlFor="firstName">First Name</label>
               <input
                 onChange={(e) => setFirstName(e.target.value)}
@@ -55,7 +55,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-wrap">
+            <div className="form-wrap-register">
               <label htmlFor="lastName">Last Name</label>
               <input
                 onChange={(e) => setLastName(e.target.value)}
@@ -66,7 +66,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-wrap">
+            <div className="form-wrap-register">
               <label htmlFor="username">Username</label>
               <input
                 onChange={(e) => setUsername(e.target.value)}
@@ -77,7 +77,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-wrap">
+            <div className="form-wrap-register">
               <label htmlFor="email">Email Address</label>
               <input
                 onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +88,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-wrap">
+            <div className="form-wrap-register">
               <label htmlFor="password">Password</label>
               <input
                 onChange={(e) => setPassword(e.target.value)}
@@ -98,7 +98,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-wrap">
+            <div className="form-wrap-register">
               <label htmlFor="confirmPassword">Confirm Password</label>
               <input
                 onChange={(e) => setConfirmPassword(e.target.value)}
