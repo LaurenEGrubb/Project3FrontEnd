@@ -38,9 +38,9 @@ export const Settings = () => {
               <button className="deletebutton">Delete Your Account?</button>
             {showForm && (
               <form className="settingbox" onSubmit={handleSubmit}>
-                <div className="form-wrap">
-                  <label htmlFor="email">Email</label>
-                  <input
+                
+                  <label class="newpassword"htmlFor="email">Email</label>
+                  <input class="newpassword"
                     onChange={handleChange}
                     name="email"
                     type="email"
@@ -48,27 +48,27 @@ export const Settings = () => {
                     value={formValues.email}
                     required
                   />
-                </div>
-                <div className="form-wrap">
-                  <label htmlFor="oldPassword">Old Password</label>
-                  <input
+                
+                
+                  <label class="newpassword"htmlFor="oldPassword">Old Password</label>
+                  <input class="newpassword"
                     onChange={handleChange}
                     name="oldPassword"
                     type="password"
                     value={formValues.password}
                     required
                   />
-                </div>
-                <div className="form-wrap">
-                  <label htmlFor="newPassword">New Password</label>
-                  <input
+                
+                
+                  <label class="newpassword"htmlFor="newPassword">New Password</label>
+                  <input class="newpassword"
                     onChange={handleChange}
                     name="newPassword"
                     type="password"
                     value={formValues.password}
                     required
                   />
-                </div>
+                
                 <button
                   class="dropdownbutton"
                   disabled={

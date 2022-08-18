@@ -57,37 +57,38 @@ const NewPost = ({ user }) => {
       {newAlbum && (
         <div className="postpage">
           <form className="postform" onSubmit={handleSubmit}>
-            <div className="form-wrap">
-              <label htmlFor="name">Album Name</label>
-              <input
+            
+              <label class="newpost" id="labelpost" htmlFor="name">Album Name</label>
+              <input class="newpost"
                 onChange={handleChange}
                 name="name"
                 type="text"
                 value={addPost.name}
                 required
               />
-            </div>
-            <div className="form-wrap">
-              <label htmlFor="description">Caption</label>
-              <input
+            
+            
+              <label class="newpost" id="labelpost"htmlFor="description">Caption</label>
+              <input class="newpost"
                 onChange={handleChange}
                 name="description"
                 type="text"
                 value={addPost.description}
                 required
               />
-            </div>
-            <div className="form-wrap">
-              <label htmlFor="photoUrl">Image</label>
-              <input
+           
+            
+              <label class="newpost"htmlFor="photoUrl" id="labelpost">Image</label>
+              <input class="newpost"
                 onChange={handleChange}
                 name="photoUrl"
                 type="text"
                 value={addPost.photoUrl}
                 required
               />
-            </div>
+            <div className='buttoncontainer'>
             <button>Post</button>
+            </div>
           </form>
         </div>
       )}
