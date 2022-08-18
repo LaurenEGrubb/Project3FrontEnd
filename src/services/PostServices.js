@@ -10,9 +10,17 @@ export const GetAlbums = async () => {
   }
 }
 
+// export const NewAlbum = async (data, userId) => {
+//   try {
+//     const res = await Client.post(`api/album/${userId}`, data)
+//     return res.data
+//   } catch (e) {
+//     throw e
+//   }
+// }
 export const NewAlbum = async (data, userId) => {
   try {
-    const res = await Client.post(`api/album/${userId}`, data)
+    const res = await Client.post(`add-image/${userId}`, data)
     return res.data
   } catch (e) {
     throw e
@@ -28,9 +36,17 @@ export const AlbumPhotos = async (albumId) => {
   }
 }
 
+// export const PostPhoto = async (data, albumId) => {
+//   try {
+//     const res = await Client.post(`api/photo/${albumId}`, data)
+//     return res.data
+//   } catch (e) {
+//     throw e
+//   }
+// }
 export const PostPhoto = async (data, albumId) => {
   try {
-    const res = await Client.post(`api/photo/${albumId}`, data)
+    const res = await Client.post(`add-image/photo/${albumId}`, data)
     return res.data
   } catch (e) {
     throw e

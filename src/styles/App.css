@@ -1,12 +1,18 @@
+/* .root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
 * {
   margin: 0;
   padding: 0;
+
 }
 
 /* .root { */
-  /* width: 960px; */
-  /* margin: 0 auto; */
-  /* position: relative; */
+/* width: 960px; */
+/* margin: 0 auto; */
+/* position: relative; */
 /* } */
 
 body {
@@ -40,7 +46,6 @@ body {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-
 }
 
 /* Forms */
@@ -53,7 +58,7 @@ body {
   justify-content: space-around;
   backdrop-filter: blur(10px);
   background: rgb(132, 130, 130);
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   border-left: 1px solid white;
   border-top: 1px solid white;
@@ -61,12 +66,11 @@ body {
   box-shadow: -6px -6px 6px rgba(28, 24, 24, 0.8),
     6px 6px 6px rgba(5, 5, 5, 0.2);
   align-items: center;
-
 }
 /*this is for input and labels for the password*/
 .newpassword {
   height: 10%;
-  width:50%;
+  width: 50%;
   align-self: center;
   background: transparent;
   border-radius: 50000px;
@@ -85,37 +89,27 @@ body {
   border-top: 1px solid white;
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
- 
- 
 }
 .postpage {
-display: flex;
-justify-content: center;
-width: 100vw;
-height: 100vh;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
 }
 /* for the input and label for the settings post page*/
 .newpost {
   height: 10%;
-  width:50%;
+  width: 50%;
   align-self: center;
   background: transparent;
   border-radius: 50000px;
 }
 
-
-
 .deletebutton {
   opacity: 0;
   z-index: -2;
 }
-
-
-
-
-
-
 
 .menu-btn {
   position: relative;
@@ -278,7 +272,6 @@ h3 {
     -4px -4px 10px rgba(255, 255, 255, 1) inset;
 }
 
-
 .links,
 .links-hidden {
   display: inline-block;
@@ -304,7 +297,6 @@ img {
   width: 10%; */
   border: 1px solid black;
   border-radius: 50%;
-
 }
 label {
   background-color: rgb(132, 130, 130);
@@ -350,4 +342,3 @@ label {
   align-content: right;
   right: -50%;
 }
-

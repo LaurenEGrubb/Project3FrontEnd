@@ -8,7 +8,7 @@ export const Nav = ({ authenticated, user, logOut }) => {
         <div className="navbar">
           <div class="greeting-container">
             <h3>Welcome back, {user.firstName}</h3>
-            <img src={user.profilePicture} />
+            {/* <img src={user.profilePicture} /> */}
             <div class="dropdowncontent">
               <Link to="/feed" class="links">
                 Feed
@@ -36,7 +36,11 @@ export const Nav = ({ authenticated, user, logOut }) => {
   const notAuthenticated = (
     <nav>
       <div className="nav-bar">
-        <Link to="/">Home</Link>
+        <Link to="/">
+          Home
+          {/* <img src="https://i.imgur.com/FjsZOji.png" alt="nav-logo" /> */}
+        </Link>
+
         <Link to="/register">Register</Link>
         <Link to="/login">Login</Link>
       </div>
