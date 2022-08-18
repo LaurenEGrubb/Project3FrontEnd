@@ -34,8 +34,9 @@ const Register = () => {
   }
   return (
     <div>
+      
+      <div className='pagewrap'>
       <div class='register'>
-
         <h1>Register</h1>
         <form className="col" onSubmit={handleSubmit}>
           <div className="form-wrap">
@@ -121,6 +122,7 @@ const Register = () => {
             Sign Up
           </button>
         </form>
+      </div>
       </div>
     </div>
   )

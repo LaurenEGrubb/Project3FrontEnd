@@ -52,6 +52,7 @@ const NewPost = ({ user }) => {
 
   return (
     <div>
+      <div className='pagewrap'>
       {!newAlbum && <button onClick={toggleShowForm}>Make New Album</button>}
       {newAlbum && (
         <div className="postpage">
@@ -90,6 +91,7 @@ const NewPost = ({ user }) => {
           </form>
         </div>
       )}
+      </div>
     </div>
   )
 }
