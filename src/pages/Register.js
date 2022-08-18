@@ -13,7 +13,9 @@ const Register = () => {
     confirmPassword: '',
     profilePicture: (<img src='https://i1.wp.com/wilcity.com/wp-content/uploads/2020/06/115-1150152_default-profile-picture-avatar-png-green.jpg?fit=820%2C860&ssl=1'/>)
   }
-const [formValues, setFormValues] = useState({initialFormState})
+
+  const [formValues, setFormValues] = useState({ initialFormState })
+
   const handleChange = (error) => {
     setFormValues({ ...formValues, [error.target.name]: error.target.value })
   }
@@ -33,6 +35,7 @@ const [formValues, setFormValues] = useState({initialFormState})
   return (
     <div>
       <div class='register'>
+
         <h1>Register</h1>
         <form className="col" onSubmit={handleSubmit}>
           <div className="form-wrap">
@@ -123,3 +126,4 @@ const [formValues, setFormValues] = useState({initialFormState})
   )
 }
 export default Register
+

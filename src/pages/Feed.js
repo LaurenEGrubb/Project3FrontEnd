@@ -22,8 +22,11 @@ const Feed = ({ user, authenticated }) => {
 
   return user && authenticated ? (
     <div>
+      {/* <Link to="/profile"> */}
+      {/* </Link> */}
       {posts?.map((post) => (
         <div className="album-card" key={post.id}>
+          <h1>@{post.username}</h1>
           <h3>{post.name}</h3>
           <p>{post.description}</p>
           <div>

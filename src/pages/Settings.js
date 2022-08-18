@@ -28,55 +28,61 @@ export const Settings = () => {
 
   return (
     <div>
-      <div>
-        {!showForm && (
-          <button onClick={toggleShowForm}>Change Password?</button>
-        )}
-        <button>Delete Your Account?</button>
-        {showForm && (
-          <form className="col" onSubmit={handleSubmit}>
-            <div className="form-wrap">
-              <label htmlFor="email">Email</label>
-              <input
-                onChange={handleChange}
-                name="email"
-                type="email"
-                placeholder="myemail@email.com"
-                value={formValues.email}
-                required
-              />
-            </div>
-            <div className="form-wrap">
-              <label htmlFor="oldPassword">Old Password</label>
-              <input
-                onChange={handleChange}
-                name="oldPassword"
-                type="password"
-                value={formValues.password}
-                required
-              />
-            </div>
-            <div className="form-wrap">
-              <label htmlFor="newPassword">New Password</label>
-              <input
-                onChange={handleChange}
-                name="newPassword"
-                type="password"
-                value={formValues.password}
-                required
-              />
-            </div>
-            <button
-              disabled={
-                !formValues.email ||
-                !formValues.oldPassword ||
-                !formValues.newPassword
-              }
-            >
-              Confirm
+      <div className="dropdown-menu">
+        <button class="menu-btn">Settings</button>
+        <div class="menu-content">
+          {!showForm && (
+            <button className="hoverbutton" onClick={toggleShowForm}>
+              Change Password?
             </button>
-          </form>
-        )}
+          )}
+          <button className="hoverbutton">Delete Your Account?</button>
+          {showForm && (
+            <form className="dropdown-content" onSubmit={handleSubmit}>
+              <div className="form-wrap">
+                <label htmlFor="email">Email</label>
+                <input
+                  onChange={handleChange}
+                  name="email"
+                  type="email"
+                  placeholder="myemail@email.com"
+                  value={formValues.email}
+                  required
+                />
+              </div>
+              <div className="form-wrap">
+                <label htmlFor="oldPassword">Old Password</label>
+                <input
+                  onChange={handleChange}
+                  name="oldPassword"
+                  type="password"
+                  value={formValues.password}
+                  required
+                />
+              </div>
+              <div className="form-wrap">
+                <label htmlFor="newPassword">New Password</label>
+                <input
+                  onChange={handleChange}
+                  name="newPassword"
+                  type="password"
+                  value={formValues.password}
+                  required
+                />
+              </div>
+              <button
+                class="dropdownbutton"
+                disabled={
+                  !formValues.email ||
+                  !formValues.oldPassword ||
+                  !formValues.newPassword
+                }
+              >
+                Confirm
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   )

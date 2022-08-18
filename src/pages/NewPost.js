@@ -10,6 +10,11 @@ const NewPost = ({ user }) => {
     description: '',
     photoUrl: ''
   })
+  const [newAlbum, setNewAlbum] = useState(false)
+
+  const toggleShowForm = () => {
+    setNewAlbum(!newAlbum)
+  }
 
   const [posts, setPosts] = useState([])
   useEffect(() => {
@@ -47,40 +52,46 @@ const NewPost = ({ user }) => {
 
   return (
     <div>
-      <form className="col" onSubmit={handleSubmit}>
-        <div className="form-wrap">
-          <label htmlFor="name">Album Name</label>
-          <input
-            onChange={handleChange}
-            name="name"
-            type="text"
-            value={addPost.name}
-            required
-          />
+      {!newAlbum && <button onClick={toggleShowForm}>Make New Album</button>}
+      {newAlbum && (
+        <div className="postpage">
+          <form className="postform" onSubmit={handleSubmit}>
+            <div className="form-wrap">
+              <label htmlFor="name">Album Name</label>
+              <input
+                onChange={handleChange}
+                name="name"
+                type="text"
+                value={addPost.name}
+                required
+              />
+            </div>
+            <div className="form-wrap">
+              <label htmlFor="description">Caption</label>
+              <input
+                onChange={handleChange}
+                name="description"
+                type="text"
+                value={addPost.description}
+                required
+              />
+            </div>
+            <div className="form-wrap">
+              <label htmlFor="photoUrl">Image</label>
+              <input
+                onChange={handleChange}
+                name="photoUrl"
+                type="text"
+                value={addPost.photoUrl}
+                required
+              />
+            </div>
+            <button>Post</button>
+          </form>
         </div>
-        <div className="form-wrap">
-          <label htmlFor="description">Caption</label>
-          <input
-            onChange={handleChange}
-            name="description"
-            type="text"
-            value={addPost.description}
-            required
-          />
-        </div>
-        <div className="form-wrap">
-          <label htmlFor="photoUrl">Image</label>
-          <input
-            onChange={handleChange}
-            name="photoUrl"
-            type="text"
-            value={addPost.photoUrl}
-            required
-          />
-        </div>
-        <button>Post</button>
-      </form>
+      )}
     </div>
   )
 }
+
 export default NewPost

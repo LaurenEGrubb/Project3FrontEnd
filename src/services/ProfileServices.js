@@ -1,5 +1,4 @@
 import Client from './api'
-import { useParams } from 'react-router-dom'
 
 // export const ProfileServices = async () => {
 export const GetAlbumsByUser = async (userId) => {
@@ -10,4 +9,20 @@ export const GetAlbumsByUser = async (userId) => {
     throw e
   }
 }
-// }
+
+export const DeleteAlbum = async (albumId) => {
+  try {
+    const res = await Client.delete(`api/album/${albumId}`)
+    return res.data
+  } catch (e) {
+    throw e
+  }
+}
+export const DeletePhoto = async (photoId) => {
+  try {
+    const res = await Client.delete(`api/photo/${photoId}`)
+    return res.data
+  } catch (e) {
+    throw e
+  }
+}
