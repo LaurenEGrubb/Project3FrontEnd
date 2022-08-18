@@ -14,7 +14,7 @@
 /* margin: 0 auto; */
 /* position: relative; */
 /* } */
-
+/* 
 body {
   background-image: url(https://www.pixel4k.com/wp-content/uploads/2018/10/dark-night-mountains-minimalist-4k_1540756023.jpg);
   background-size: cover;
@@ -24,11 +24,11 @@ body {
   display: flex;
   font-family: 'Montserrat', sans-serif;
   /* width: 960px; */
-  margin: 0 auto;
-  position: relative;
-}
+  /* margin: 0 auto; */
+  /* position: relative; */
+/* } */
 /* Containers */
-.container {
+/* .container {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -46,10 +46,10 @@ body {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-}
+} */
 
 /* Forms */
-.settingbox {
+/* .settingbox {
   height: 15vh;
   width: 15vw;
   padding: 25%;
@@ -65,10 +65,10 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: -6px -6px 6px rgba(28, 24, 24, 0.8),
     6px 6px 6px rgba(5, 5, 5, 0.2);
-  align-items: center;
-}
+  align-items: center; */
+/* } */
 /*this is for input and labels for the password*/
-.newpassword {
+/* .newpassword {
   height: 10%;
   width: 50%;
   align-self: center;
@@ -85,20 +85,20 @@ body {
   flex-direction: column;
   background: rgb(132, 130, 130);
   border-radius: 20px;
-  border-left: 1px solid white;
-  border-top: 1px solid white;
+  border-left: 1px solid white; */
+  /* border-top: 1px solid white;
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-}
-.postpage {
+} */
+/* .postpage {
   display: flex;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   align-items: center;
-}
+} */
 /* for the input and label for the settings post page*/
-.newpost {
+/* .newpost {
   height: 10%;
   width: 50%;
   align-self: center;
@@ -127,23 +127,23 @@ h1 {
   font-size: 2.2rem;
   margin-top: 0;
   margin-bottom: 0px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  align-self: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+  /* align-self: center;
 }
 
 .buttoncontainer {
   display: flex;
   justify-content: center;
 }
-button {
-  margin-top: 5%;
-  width: 5rem;
-  border-radius: 10%;
+button { */
+  /* margin-top: 5%; */
+  /* width: 5rem; */
+  /* border-radius: 10%;
   align-content: center;
   font-size: 1rem;
-  font: black;
-  background: rgba(107, 108, 108, 0.1);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+  font: black; */
+  /* background: rgba(107, 108, 108, 0.1); */
+  /* box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
   color: #000000;
 }
 button:hover {
@@ -171,8 +171,8 @@ button:focus {
   overflow: auto;
 }
 .segment {
-  display: flex;
-  position: relative;
+  display: flex; */
+  /* position: relative;
   justify-content: center;
   flex-direction: row;
   align-items: center;
@@ -202,8 +202,8 @@ segment.logininput {
   font-weight: 500;
   transition: all 0.5s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
+  box-sizing: border-box; */
+/* }
 .register {
   display: flex;
   align-content: center;
@@ -219,16 +219,16 @@ segment.logininput {
   width: 100vw;
   height: 15vh;
   position: relative;
-  background-color: #4c4c4c;
+  background-color: #4c4c4c; */
   /* backdrop-filter: (5px); */
-  opacity: 0.45;
+  /* opacity: 0.45;
   border: 2px solid rgba(7, 4, 4, 0.648);
   box-shadow: 4px 4px 6px 0 rgba(7, 1, 1, 0.872), -4px -4px 6px rgb(0, 0, 0);
   border-radius: 0 0 10px 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; */
   /* padding: 5% 50%; */
-  padding-right: 0%;
+  /* padding-right: 0%;
   list-style-type: none;
   z-index: 2;
 }
@@ -244,8 +244,8 @@ h3 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   align-self: center;
 }
-.links {
-  margin: 2 rem;
+.links { */
+  /* margin: 2 rem;
   text-align: center;
   padding: 0.5rem 1.5rem;
   border: 2px solid rgba(25, 23, 23, 0.648);
@@ -292,10 +292,10 @@ h3 {
 img {
   position: relative;
   max-width: 10vw;
-  max-height: 10vh;
+  max-height: 10vh; */
   /*height: 10%;
   width: 10%; */
-  border: 1px solid black;
+  /* border: 1px solid black;
   border-radius: 50%;
 }
 label {
@@ -340,5 +340,5 @@ label {
   display: flex;
   justify-content: center;
   align-content: right;
-  right: -50%;
-}
+  right: -50%; */
+/* } */ 
