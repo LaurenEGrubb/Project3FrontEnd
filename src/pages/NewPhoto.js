@@ -5,39 +5,29 @@ import { AlbumPhotos } from '../services/PostServices'
 
 const NewPhoto = ({ album, user, showPhotos }) => {
   let navigate = useNavigate()
-  const [addPhoto, setAddPhoto] = useState({
-    name: '',
-    description: '',
-    photoUrl: ''
-  })
-  const [photo, setPhoto] = useState([])
+  const [name, setName] = useState('')
+  const [description, setDescription] = useState('')
+  const [photoUrl, setPhotoUrl] = useState('')
+  // const [photo, setPhoto] = useState([])
   const [newPhoto, setNewPhoto] = useState(false)
 
   const toggleShowForm = () => {
     setNewPhoto(!newPhoto)
   }
 
-  const handleChange = (e) => {
-    setAddPhoto({ ...addPhoto, [e.target.name]: e.target.value })
-  }
+  // const handleChange = (e) => {
+  //   setAddPhoto({ ...addPhoto, [e.target.name]: e.target.value })
+  // }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await PostPhoto(
-      {
-        name: addPhoto.name,
-        description: addPhoto.description,
-        photoUrl: addPhoto.photoUrl
-      },
-      album.id
-    )
+    const formData = new FormData()
+    formData.append('photoUrl', photoUrl)
+    formData.append('description', description)
+    formData.append('name', name)
+    let res = await PostPhoto(formData, album.id)
     console.log(res)
-    setAddPhoto({
-      name: '',
-      description: '',
-      photoUrl: ''
-    })
-    showPhotos()
+    setTimeout(() => showPhotos(), 1000)
   }
   return (
     <div>
@@ -49,30 +39,29 @@ const NewPhoto = ({ album, user, showPhotos }) => {
           <div className="form-wrap">
             <label htmlFor="name">Picture</label>
             <input
-              onChange={handleChange}
+              onChange={(e) => setName(e.target.value)}
               name="name"
               type="text"
-              value={addPhoto.name}
+              value={name}
               required
             />
           </div>
           <div className="form-wrap">
             <label htmlFor="description">Caption</label>
             <input
-              onChange={handleChange}
+              onChange={(e) => setDescription(e.target.value)}
               name="description"
               type="text"
-              value={addPhoto.description}
+              value={description}
               required
             />
           </div>
           <div className="form-wrap">
             <label htmlFor="photoUrl">Image</label>
             <input
-              onChange={handleChange}
+              onChange={(e) => setPhotoUrl(e.target.files[0])}
               name="photoUrl"
-              type="text"
-              value={addPhoto.photoUrl}
+              type="file"
               required
             />
           </div>

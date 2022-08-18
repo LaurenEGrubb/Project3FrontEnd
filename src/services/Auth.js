@@ -10,9 +10,17 @@ export const SignInUser = async (data) => {
     throw error
   }
 }
+// export const RegisterUser = async (data) => {
+//   try {
+//     const res = await Client.post('api/users/register', data)
+//     return res.data
+//   } catch (error) {
+//     throw error
+//   }
+// }
 export const RegisterUser = async (data) => {
   try {
-    const res = await Client.post('api/users/register', data)
+    const res = await Client.post('/add-image', data)
     return res.data
   } catch (error) {
     throw error

@@ -19,7 +19,7 @@ export const Nav = ({ authenticated, user, logOut }) => {
               </Link>
               <Link to="/profile" class="links">
                 Profile
-                {/* <img src={user.profilePicture} alt="" /> */}
+                <img src={user.profilePicture} alt="" />
               </Link>
               <Link to="/settings" class="links">
                 Settings
