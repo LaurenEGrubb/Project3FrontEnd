@@ -3,15 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
 import react from 'react'
 import '../styles/App.css'
-
 const Login = ({ setUser, setAuthenticated }) => {
   let navigate = useNavigate()
   const [formValues, setFormValues] = useState({ email: '', password: '' })
-
   const handleChange = (error) => {
     setFormValues({ ...formValues, [error.target.name]: error.target.value })
   }
-
   const handleSubmit = async (error) => {
     error.preventDefault()
     const payload = await SignInUser(formValues)
@@ -20,14 +17,11 @@ const Login = ({ setUser, setAuthenticated }) => {
     setAuthenticated(true)
     navigate('/feed')
   }
-
   return (
-    
     <div class='container'>
       <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap' rel="App.css"></link>
        <div class='login'>
         <h1>Welcome Back</h1>
-        
         </div>
         <form onSubmit={handleSubmit}>
           <div className="segment">
@@ -56,7 +50,6 @@ const Login = ({ setUser, setAuthenticated }) => {
             Login
           </button>
         </form>
-        
         <div class="drops">
             <div class="drop drop-1"></div>
             <div class="drop drop-2"></div>
@@ -76,5 +69,4 @@ const Login = ({ setUser, setAuthenticated }) => {
     </div>
   )
 }
-
 export default Login
