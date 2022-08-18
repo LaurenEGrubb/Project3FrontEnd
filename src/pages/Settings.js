@@ -28,8 +28,8 @@ export const Settings = () => {
 
   return (
     <div>
-    <div class='pagewrap'>
-        <h1>Settings</h1>
+    <div class='pagewrap-setting'>
+        <div className="settingheader"><h1>Settings</h1></div>
             {!showForm && (
               <button className="hoverbutton" onClick={toggleShowForm}>
                 Change Password?
@@ -70,7 +70,6 @@ export const Settings = () => {
                   />
                 
                 <button
-                  class="dropdownbutton"
                   disabled={
                     !formValues.email ||
                     !formValues.oldPassword ||
