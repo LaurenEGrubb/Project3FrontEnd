@@ -39,7 +39,7 @@ const NewPost = ({ user }) => {
   return (
     <div>
       <div className="pagewrap-newpost">
-        {!newAlbum && <button onClick={toggleShowForm}>Make New Album</button>}
+        {!newAlbum && <button className='make-album-button' onClick={toggleShowForm}>Make New Album</button>}
         {newAlbum && (
           <div className="postpage">
             <form className="postform" onSubmit={handleSubmit}>

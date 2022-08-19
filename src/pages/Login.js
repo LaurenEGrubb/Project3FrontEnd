@@ -24,7 +24,7 @@ const Login = ({ setUser, setAuthenticated }) => {
        <div class='login'>
         <h1>Welcome Back</h1>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form className="loginform"onSubmit={handleSubmit}>
           <div className="form-wrap">
             <label htmlFor="email">Email</label>
             <input

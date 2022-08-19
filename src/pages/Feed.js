@@ -31,7 +31,7 @@ const Feed = ({ user, authenticated }) => {
           <p>{post.description}</p>
           <div>
             <Link to={`/feed/${post.id}`}>
-              <img src={post.photoUrl} />
+              <img class="photoUrl" src={post.photoUrl} />
             </Link>
           </div>
         </div>
