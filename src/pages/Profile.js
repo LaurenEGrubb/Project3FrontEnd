@@ -37,13 +37,13 @@ const Profile = ({ user }) => {
             <p>{post.description}</p>
 
             <Link to={`/feed/${post.id}`}>
-              <img src={post.photoUrl} />
+              <img class="photoUrl" src={post.photoUrl} />
             </Link>
-            <Link to={`/edit/${post.id}`}>Edit Post</Link>
+            <Link className="editbutton"to={`/edit/${post.id}`}>Edit Post</Link>
             {/* <EditPost posts={posts} /> */}
 
             <div>
-              <button onClick={() => deleteAlbum(post.id)}>X</button>
+              <button onClick={() => deleteAlbum(post.id)} className="delete">X</button>
               <div></div>
             </div>
           </div>

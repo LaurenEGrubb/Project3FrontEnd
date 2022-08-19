@@ -34,7 +34,7 @@ const AlbumDetails = ({ user, authenticated }) => {
       {album.photos?.map((photo) => (
         <div className="photo-card" key={photo.id}>
           <div>
-            <img src={photo.photoUrl} />
+            <img class="photoUrl" src={photo.photoUrl} />
           </div>
           <h3>{photo.name}</h3>
           <p>{photo.description}</p>

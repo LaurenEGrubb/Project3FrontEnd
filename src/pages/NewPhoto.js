@@ -32,7 +32,7 @@ const NewPhoto = ({ album, user, showPhotos }) => {
   return (
     <div>
       {!newPhoto && (
-        <button onClick={toggleShowForm}>Add Photo to Album</button>
+        <button className="addphotbutton"onClick={toggleShowForm}>Add Photo to Album</button>
       )}
       {newPhoto && (
         <form className="col" onSubmit={handleSubmit}>
